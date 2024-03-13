@@ -1,9 +1,9 @@
-import Login from './Comps/Login';
+// import Login from './Comps/Login';
 
 const App = () => {
   return (
     <>
-      <Login />
+      {/* <Login /> */}
     </>
   );
 };

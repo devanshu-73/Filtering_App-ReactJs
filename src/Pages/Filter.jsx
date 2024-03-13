@@ -1,24 +1,18 @@
-import { useEffect, useState } from "react"
+import {useState } from "react"
 import axios from 'axios';
 const Filter = () => {
     const [Items, setItems] = useState([]);
-    const [Value, setValue] = useState();
-    useEffect(() => {
-        handleSubmit()
-    }, [Value])
-    const handleOnchange = (e) => {
-        setValue(e.target.value)
-        console.log(Value);
-    }
     const handleSubmit = async () => {
-        
-        let res = await axios.get('http://localhost:3001/filter')
+
+        let res = await axios.get(`http://localhost:3001/filter`)
         setItems(res.data)
         console.log(res.data);
     }
+    const handleOnchange = (e) => {
+    }
     return (
         <>
-            <input type="search" name="search" id="search" onChange={handleOnchange} value={Value} placeholder="Search Here..." />
+            <input type="search" name="search" id="search" onChange={handleOnchange} placeholder="Search Here..." />
             <input type="submit" onClick={handleSubmit} value="Submit" />
             <hr />
             <table border={1}>

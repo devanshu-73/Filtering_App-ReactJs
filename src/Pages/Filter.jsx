@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Filter = () => {
     const [items, setItems] = useState([]);
-    const [searchQuery, setSearchQuery] = useState('');
+    const [search, setSearch] = useState('');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -17,11 +17,11 @@ const Filter = () => {
         fetchData();
     }, []);
 
-    const handleOnChange = (event) => {
-        setSearchQuery(event.target.value);
+    const handleOnChange = (e) => {
+        setSearch(e.target.value);
     }
 
-    const filteredItems = items.filter(item => item.title.toLowerCase().includes(searchQuery.toLowerCase()));
+    const filteredItems = items.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
 
     return (
         <>

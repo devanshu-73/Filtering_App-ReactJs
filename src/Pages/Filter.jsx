@@ -25,7 +25,7 @@ const Filter = () => {
 
     return (
         <>
-            <input type="search" name="search" id="search" onChange={handleOnChange} placeholder="Search Here..." />
+            <input type="search" name="search" onChange={handleOnChange} placeholder="Search Here..." />
             <hr />
             <table border={1}>
                 <thead>

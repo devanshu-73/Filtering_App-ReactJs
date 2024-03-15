@@ -42,7 +42,7 @@ const Login = () => {
                     <div className="shape" />
                 </div>
                 <form onSubmit={handleSubmit}>
-                    <h3>Login | Devanshu </h3>
+                    <h3>Login | Devanshu Chauhan</h3>
                     <label htmlFor="username">Username</label>
                     <input type="text" placeholder="Email or Phone" onChange={handleOnChange} value={formValue.username} id="username" name='username' />
                     <label htmlFor="password">Password</label>
